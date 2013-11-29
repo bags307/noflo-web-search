@@ -12,12 +12,12 @@
     "components": {
       "MakeRequest": "./components/MakeRequest.coffee",
       "SendRequest": "./components/SendRequest.coffee",
-	  "Display": "./components/Display.coffee"
+      "Display": "./components/Display.coffee",
+	  "SearchController": "./components/SearchController.coffee"
     },
     "graphs": {}
   },
   "dependencies": {
-    "useragent": "~2.0.7",
     "noflo": "~0.4.2",
     "express": "~3.4.4",
     "jade": "~0.35.0",
