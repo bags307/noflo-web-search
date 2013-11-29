@@ -10,7 +10,7 @@ class MakeRequest extends Component
     @method = 'GET'
 
     @inPorts =
-      in:     new Port 'string'
+      in: new Port 'string'
       method: new Port 'string'
     @outPorts =
       out: new Port 'object'
@@ -20,7 +20,8 @@ class MakeRequest extends Component
 
     @inPorts.method.on 'data', (@method) =>
 
-    @inPorts.in.on 'data', (url) =>
+    @inPorts.in.on 'data', (text) =>
+      url = "http://tinysong.com/s/"+text+"?format=json&limit=10&key=a337b63c225442d8c370830785a4e92b"
       @outPorts.out.send request(@method, url)
       @method = 'GET'
 

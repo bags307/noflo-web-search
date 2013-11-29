@@ -6,9 +6,9 @@ Component = noflo.AsyncComponent
 class SendRequest extends Component
   constructor: ->
     @inPorts =
-      in:    new Port 'object'
+      in: new Port 'object'
     @outPorts =
-      out:   new Port 'object'
+      out: new Port 'object'
       error: new Port 'object'
     super()
 
